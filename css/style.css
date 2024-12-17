@@ -8,6 +8,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  background-color: #f1f1f1;
 }
 
 h1,
@@ -31,7 +32,7 @@ label,
 input,
 textarea,
 li {
-  color: #655d65;
+  color: black;
 }
 
 a {
@@ -41,7 +42,8 @@ a {
 }
 
 a:hover {
-  color: #007bff; /* Change to your desired hover color */
+  color: salmon;
+  /* Change to your desired hover color */
 }
 
 .container {
@@ -54,7 +56,28 @@ a:hover {
     width: 90%;
   }
 }
+/* titles */
+.pre-title {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: #656d72;
+  position: relative;
+  padding-left: 40px;
+  width: fit-content;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
 
+.pre-title::before {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: #000000;
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 50%;
+}
 /* LOGO AND NAVIGATION MENU */
 .nav {
   display: flex;
@@ -67,6 +90,10 @@ a:hover {
   list-style: none;
   display: flex;
   gap: 3rem;
+  background-color: rgb(63, 78, 78);
+  border-radius: 3rem;
+  z-index: 1000;
+  padding: 1rem 2rem;
 }
 
 .logo {
@@ -76,8 +103,12 @@ a:hover {
   font-size: 2rem;
 }
 
-.logo a {
+.logo img {
   color: #232e35;
+  width: 70px;
+  border-radius: 55%;
+  cursor: pointer;
+  border-style: solid;
 }
 
 nav ul li {
@@ -86,5 +117,46 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #232e35;
+  color: #dddd;
+}
+
+/* Hamberger menu */
+.burger div {
+  width: 25px;
+  height: 2px;
+  background-color: black;
+  margin: 7px;
+  transition: all 0.3s;
+  z-index: 99;
+}
+.burger {
+  display: none;
+  z-index: 99;
+  position: fixed;
+  top: 33px;
+  right: 35px;
+}
+/* hero section */
+.hero {
+  height: 400px;
+  align-items: center;
+
+  display: grid;
+  grid-template-columns: 3fr 0.5fr;
+}
+.hero-name {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0.5rem 0 1rem;
+}
+.hero-name span {
+  color: rgb(232, 169, 74);
+}
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(63, 78, 78);
+  border-radius: 20px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
 }
