@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  color: #232e35;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.9rem;
+}
+
+p,
+span,
+label,
+input,
+textarea,
+li {
+  color: #655d65;
+}
+
+a {
+  text-decoration: none;
+  color: #232e35;
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+a:hover {
+  color: #007bff; /* Change to your desired hover color */
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 90%;
+  }
+}
+
+/* LOGO AND NAVIGATION MENU */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center items vertically */
+  padding: 2rem 0;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.logo a {
+  color: #232e35;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a {
+  color: #232e35;
+}
