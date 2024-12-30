@@ -5,34 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
   </head>
   <body>
     <!-- header -->
+     <!-- hambuger menu -->
     <header>
       <div class="container">
-        <div class="nav">
-          <div class="logo">
-            <img src="img/logo.jpg" alt="" />
-          </div>
-          <nav>
-            <ul>
-              <li><a href="#Homes">Home</a></li>
-              <li><a href="#profiles">Profile</a></li>
-              <li><a href="#skills">Skill</a></li>
-              <li><a href="#hobby">Hobby</a></li>
-              <li><a href="#contact">Contact</a></li>
-             
-            </ul>
-          </nav>
-          <div class="burger">
-            <div class="line-1"></div>
-            <div class="line-2"></div>
-            <div class="line-3"></div>
-          </div>
+       <nav class="apaweh">
+        <div class="">
+          <img src="/img/logo.jpg" alt="my-avatar">
         </div>
-        <section class="hero">
+        <div id="menu-icon" class="menu-icon">
+          <i class="ph ph-list"></i>
+        </div>
+        <ul id="menu-list" class="hidden">
+          <li>
+            <a href="#Home" class="active">Home</a>
+          </li>
+          <li>
+            <a href="#Profile">Profile</a>
+          </li>
+          <li>
+            <a href="#Skill">Skill</a>
+          </li>
+          <li>
+            <a href="#Hobby">Hobby</a>
+          </li>
+          <li>
+            <a href="#Contact">Contact</a>
+          </li>
+        </ul>
+       
+       </nav>
+       
+
+         
+          <!-- end hamburger menu -->
+        <main>
+        <section class="hero" id="Home">
           <div class="hero-left">
-            <h3 class="pre-title">My Name is</h3>
+            <h3 class="pre-title ">My Name is</h3>
 
             <h1 class="hero-name">Rian Hery <span>Juniarto</span></h1>
             <p>
@@ -45,11 +58,12 @@
           </div>
         </section>
       </div>
+    </main>
     </header>
 
     <!-- end header -->
      <!-- service -->
-    <section id="services">
+    <section id="Profile">
       <div class="services main-container">
         <h1 class="section-title services-title">About Me</h1>
         <div class="grid-3">
@@ -71,6 +85,7 @@
     </section>
     <!-- end service -->
     <!-- portofolio -->
+     <section id="Skill">
 <div class="judul">
     <h1 class="judul-portfolio">My Skills</h1>
   </div>
@@ -82,37 +97,78 @@
   <img src="img/logohtml.png" height="150" width="150" alt=""> </div>
   <div class="skill">
     <img src="img/logojs.png" height="100" width="-150" alt=""> </div>
-  
-
-      
-
-
-
     </div>
-
-
+  </section>
+    
 
 
      <!-- end portopolio -->
 
       <!--Hobby  -->
+      <section id="Hobby">
       <div class="judul-hobbys">
         <h1 class="judul-hobby">My Hobby</h1>
       </div>
-      <section class="hobby-container">
+      <section class="hobby-container" >
         <div class="foto1">
-          <img src="img/game1.jpg" height="250"  alt="" >
-          <h3>Games</h3>
-        </div>
-        <div class="foto3">
-          <a></a>
-        </div>
-        <div class="foto2">
-          <img src="img/foto olahraga.jpg" height="250"  alt="" >
-          
+          <img class="foto-hobby" src="img/fotogame.jpg" height="200"  alt="" >
+          <h3>GAMES</h3>
         </div>
        
+        <div class="foto2">
+          <img  class="foto-hobby2" src="img/menonton film.jpeg" height="200"  alt="" >
+          <H3>FILM</H3>
+        </div>
+        <div class="foto2">
+          <img class="foto-hobby3" src="img/olahtraga.jpeg" height="200"  alt="" >
+          <H3>SPORTS</H3>
+        </div>
       </section>
+    </section>
+    
+      <!-- end hobby -->
+      <!-- contact -->
+
+      <section class="contact" id="Contact">
+        <div class="contact-container">
+          <h2>CONTACT US</h2>
+          <div class="contact-wrapper">
+            <div class="contact-form">
+              <h3>SEND US A MASSAGE</h3>
+              <form >
+                <div class="form-group">
+                  <input type="text" name="name" placeholder="your name">
+                </div>
+              </form>
+              <form action="https://api.web3forms.com/submit" method="POST">
+                <div class="form-group">
+                 
+                  <input type="email" name="email" placeholder="your email">
+                </div>
+                <div class="form-group">
+                  <input type="hidden" name="access_key" value="dbba496a-883f-4e3d-8907-3972398f43e5">
+                 <textarea name="message" placeholder="Your massage"></textarea>
+                </div>
+                <button type="submit">send massage</button>
+              </form>
+            </form>>
+            </div>
+            <div class="contact-info">
+              <h3>CONTACT INFOMATION</h3>
+              <p>+62 8788 1965 193</p>
+              <p>info@rianherijr.com</p>
+              <p>Karawang,Indonesia</p>
+            </div>
+          </div>
+          
+
+        </div>
+
+
+      </section>
+      <script src="/js/script.js"></script>
+      
+     
       
 
   </body>

@@ -9,6 +9,7 @@
 body {
   font-family: "Roboto", sans-serif;
   background-color: #f1f1f1;
+  overflow-x: hidden;
 }
 
 h1,
@@ -43,17 +44,129 @@ a {
 
 a:hover {
   color: salmon;
-  /* Change to your desired hover color */
 }
 
 .container {
-  width: 1200px;
-  margin: 0 auto;
+  width: 1500px;
+  height: 700px;
 }
 
 @media screen and (max-width: 768px) {
   .container {
-    width: 90%;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  p {
+    font-size: 0.9rem;
+    line-height: 1.8rem;
+  }
+  .grid-3 {
+    font-size: 15px;
+    padding: 50px;
+  }
+  .hero-right {
+    height: 80%;
+    width: 85%;
+  }
+  .menu-icon {
+    display: none;
+  }
+}
+.apaweh {
+  background-color: rgb(63, 78, 78);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+.apaweh ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+.apaweh ul li a {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(179, 177, 177);
+  font-weight: 600;
+  padding: 8px 0;
+  transition: all;
+  transition-duration: 300ms;
+  border-bottom: 1px solid rgba(255, 68, 0, 0);
+}
+.apaweh div img {
+  width: 40px;
+  border-radius: 50px;
+}
+.apaweh ul li a:hover {
+  border-bottom: 1px solid orangered;
+  color: orangered;
+}
+/* Hamberger menu */
+.menu-icon {
+  font-weight: 80px;
+  font-size: 24px;
+  display: none;
+  align-items: center;
+}
+.main {
+  margin-top: 3rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .apaweh {
+    flex-wrap: wrap;
+    position: fixed;
+    width: 100%;
+  }
+  .apaweh ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  .apaweh ul.hidden {
+    display: none;
+  }
+  .menu-icon {
+    display: flex;
+    align-items: center;
+  }
+  .hero-right {
+    visibility: hidden;
+    background-color: #000000;
+    /* width: 250px;
+    height: auto; */
+  }
+  .hero-name {
+    width: auto;
+  }
+  .hero-left {
+    position: absolute;
+    left: 20px;
+  }
+
+  .foto1 {
+    height: auto;
+    width: 400px;
+  }
+  .foto2 {
+    height: auto;
+    width: 400px;
+  }
+  .foto3 {
+    height: auto;
+    width: 400px;
+  }
+  .foto-hobby {
+    height: 150px;
+  }
+  .foto-hobby2 {
+    height: 150px;
+  }
+  .foto-hobby3 {
+    height: 150px;
   }
 }
 
@@ -71,13 +184,14 @@ a:hover {
   width: fit-content;
   font-weight: 400;
   font-size: 0.9rem;
+  margin-left: 100px;
 }
 
 .pre-title::before {
   content: "";
   width: 30px;
   height: 1px;
-  background: #000000;
+  background: #6c6262;
   position: absolute;
   display: block;
   left: 0;
@@ -91,67 +205,10 @@ a:hover {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 3rem;
 }
-/* LOGO AND NAVIGATION MENU */
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* Center items vertically */
-  padding: 2rem 0;
-}
 
-.nav ul {
-  list-style: none;
-  display: flex;
-  gap: 3rem;
-  background-color: rgb(63, 78, 78);
-  border-radius: 3rem;
-  z-index: 1000;
-  padding: 1rem 2rem;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  font-weight: 700;
-  font-size: 2rem;
-}
-
-.logo img {
-  color: #232e35;
-  width: 70px;
-  border-radius: 55%;
-  cursor: pointer;
-  border-style: solid;
-}
-
-nav ul li {
-  display: flex;
-  align-items: center;
-}
-
-nav ul li a {
-  color: #dddd;
-}
-
-/* Hamberger menu */
-.burger div {
-  width: 25px;
-  height: 2px;
-  background-color: black;
-  margin: 7px;
-  transition: all 0.3s;
-  z-index: 99;
-}
-.burger {
-  display: none;
-  z-index: 99;
-  position: fixed;
-  top: 33px;
-  right: 35px;
-}
 /* hero section */
 .hero {
-  height: 400px;
+  height: 600px;
   align-items: center;
 
   display: grid;
@@ -161,17 +218,24 @@ nav ul li a {
   font-size: 3rem;
   font-weight: 700;
   margin: 0.5rem 0 1rem;
+  margin-left: 100px;
 }
 .hero-name span {
   color: rgba(213, 166, 65, 0.956);
 }
 
 .hero-right {
-  display: flex;
+  display: grid;
   justify-content: center;
   background-color: rgb(63, 78, 78);
   border-radius: 20px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  margin-right: 100px;
+  /* overflow: hidden; */
+}
+.hero p {
+  margin-left: 100px;
+  padding: 0px;
 }
 /* services section */
 .services {
@@ -216,6 +280,11 @@ nav ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.skill:hover {
+  background-color: rgb(63, 78, 78);
 }
 .skill img {
   max-width: 100%;
@@ -237,39 +306,121 @@ nav ul li a {
 .hobby-container {
   padding: 5rem 0;
   display: flex;
-  gap: 16rem;
+  gap: 1rem;
   background-color: #dddd;
+  justify-content: center;
 }
 .foto1 {
-  border: 2px solid black;
+  border: 2px solid rgb(0, 0, 0);
   border-radius: 0.5rem;
-  padding: 20px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
-  align-items: baseline;
-  justify-content: left;
+  align-items: center;
   cursor: pointer;
   margin-left: 20px;
 }
-.foto1 h3 {
-}
+
 .foto2 {
   border: 2px solid black;
   border-radius: 0.5rem;
-  padding: 20px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
-  align-items: baseline;
-  justify-content: left;
+  align-items: center;
   cursor: pointer;
+  margin-left: 20px;
 }
-.foto3 {
-  border: 2px solid black;
-  border-radius: 0.5rem;
-  padding: px;
-  display: flex;
-  flex-direction: column;
-  align-items: baseline;
-  justify-content: left;
+
+@media screen and (max-width: 768px) {
+  .hobby-container {
+    display: grid;
+    padding: 15px;
+    grid-template-columns: 1fr;
+    justify-content: space-between;
+  }
+}
+/* CONTACT */
+.contact {
+  min-height: 100vh;
+  background-color: rgb(63, 78, 78);
+  padding: 50px;
+  text-align: center;
+}
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.contact-container h2 {
+  color: #f1f1f1;
+}
+.contact-container H3 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+}
+.contact-form {
+  text-align: left;
+}
+.contact-form h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 8px #bbb;
+}
+button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
   cursor: pointer;
+  transition: 0.3s ease;
+}
+.button:hover {
+  background-color: #45a049;
+}
+.contact-info {
+  text-align: left;
+}
+.contact-info h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+.contact-info p {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+@media screen and (max-width: 768px) {
+  .contact-container {
+    padding: 20px;
+  }
+
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
 }
