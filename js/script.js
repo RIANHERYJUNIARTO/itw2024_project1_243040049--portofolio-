@@ -1,28 +1,30 @@
 const menuicon = document.getElementById("menu-icon");
 const menulist = document.getElementById("menu-list");
+
 menuicon.addEventListener("click", () => {
   menulist.classList.toggle("hidden");
 });
 
 let sections = document.querySelectorAll("section");
-let navLinks = document.querySelectorAll("header apaweh a");
+let navLinks = document.querySelectorAll("header a");
 
-// window.onscroll = () => {
-//   let scrollPosition = window.scrollY;
+navLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    const targetId = link.getAttribute("href");
+    const targetSection = document.querySelector(targetId);
 
-//   sections.forEach((sec) => {
-//     let offset = sec.offsetTop;
-//     let height = sec.offsetHeight;
-//     let id = sec.getAttribute("id");
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
 
-//     if (scrollPosition >= offset && scrollPosition < offset + height) {
-//       navLinks.forEach((link) => {
-//         link.classList.remove("active");
-//       })
+// const menuicon = document.getElementById("menu-icon");
+// const menulist = document.getElementById("menu-list");
+// menuicon.addEventListener("click", () => {
+//   menulist.classList.toggle("hidden");
+// });
 
-//       document
-//         .querySelector(`header apaweh a[href="#${id}"]`)
-//         .classList.add("active");
-//     }
-//   });
-// };
+// let sections = document.querySelectorAll("section");
+// let navLinks = document.querySelectorAll("header apaweh a");
