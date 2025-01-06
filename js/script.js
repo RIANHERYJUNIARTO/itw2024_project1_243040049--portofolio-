@@ -19,12 +19,3 @@ navLinks.forEach((link) => {
     }
   });
 });
-
-// const menuicon = document.getElementById("menu-icon");
-// const menulist = document.getElementById("menu-list");
-// menuicon.addEventListener("click", () => {
-//   menulist.classList.toggle("hidden");
-// });
-
-// let sections = document.querySelectorAll("section");
-// let navLinks = document.querySelectorAll("header apaweh a");
