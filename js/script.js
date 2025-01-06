@@ -18,7 +18,7 @@ let navLinks = document.querySelectorAll("header apaweh a");
 //     if (scrollPosition >= offset && scrollPosition < offset + height) {
 //       navLinks.forEach((link) => {
 //         link.classList.remove("active");
-//       });
+//       })
 
 //       document
 //         .querySelector(`header apaweh a[href="#${id}"]`)
